@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>Joshua Katz - Software Engineering</title>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			hr { width: 90%; }
+
+			.content {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.content .*::before, .content .*:after {
+				box-sizing: boarder-box;
+			}
+
+			.content .item {
+				padding: 1em;
+				margin: .5em;
+				border-radius: 15px;
+			}
+
+			.content .head { max-width: 55%; }
+
+			.content .head .social a {
+				color: black;
+				text-decoration: none;
+			}
+
+			.content .head .social a:hover {
+				color: blue;
+				text-decoration: underline;
+			}
+
+			.content .post {
+				max-width: 75%;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="item head">
+				<h1>Joshua D. Katz</h1>
+				<div class="social">
+					( <a class="fa fa-envelope" id="mail-address" href="#" onclick="mail_address();"></a> | <a target="_blank" class="fa fa-github-square" href="https://github.com/gravypod/"></a> | <a target="_blank" class="fa fa-hacker-news" href="https://news.ycombinator.com/user?id=gravypod"></a> )
+				</div>
+				<p>I'm a Software Engineer who work mostly at the systems level as you can probably tell from my poorly crafted website. Please pretend that this is just some misguided attempt at being 'minimalistic' on my part so you and I can continue on with this 'content' thing that you're probably expecting. I'm currently interested in network protocol development, game development, stream processing, data science, and Amateur Radio.</p>
+			</div>
+
+			<h2>Projects</h2>
+
+			<div class="item post">
+				<h3>BargeIn</h3>
+				(2016-12-16)
+				<p>An automated system that scans craigslist for search terms. It will scrape the site when run and send an email to a specified address when an item is found matching configured search terms. This was used to look for an X230T that I was pining over.</p>
+			</div>
+
+			<div class="item post">
+				<h3>ButcherSchool</h3>
+				(2016-12-11)
+				<p>A static website used to train people the answers to the Amateur Radio license exam questions. This includes a set of converter scripts, to convert the PDFs provided by the FCC, into a readable format and also the HTML, JavaScript, and css needed to display this to users. It will randomly give you questions from the question pool only removing questions after you've got them right 15 times in in a row. All information is stored in the localStorage of the user's browser making it usable when you have no internet connectivity which is the best time to study.</p>
+			</div>
+
+			<div class="item post">
+				<h3>Simple-OS</h3>
+				(2016-15-03)
+				<p>A concept kernel and operating system written for an X86 system. I didn't know how to use make at this time so I wrote my own build system as well. The OS was in C and the build system called Bob was written in PHP. I got interrupts and video memory working then had to move on to bigger and better things. Such is life.</p>
+			</div>
+
+			<div class="item post">
+				<h3>GradeO</h3>
+				(2015-19-15)
+				<p>An automated grading system developed during my time as a classroom assistant for the CS 100 program at the New Jersey Institute of Technology. This has the ability to grade assignments, dispatch grades, and attempt to detect cheating. This uses a distance algorithm to compare the ASTs of every lab to every other lab that was submitted. Since I don't own any super computers I wasn't able to do a real tree distance and instead had to fudge something on my own that used the Levenshtein distance formula as a base and recursively applied to to children nodes.</p>
+			</div>
+
+			<div class="item post">
+				<h3>StarmadeWrapper</h3>
+				(2015-05-30)
+				<p>A process wrapper for a popular multiplayer game. This was a system developed for a game server I was running. It initially started as a program to keep the server up and restart it when it silently failed. It morphed into something completely different. In essence it was a massively over-complicated log parser. It had a dynamic plugin system, a really poorly made permissions system, and a lot of addons written for it by myself. At least one other person I know of has used it for managing their game server and has committed back code to the project.</p>
+			</div>
+
+			<div class="item post">
+				<h3>Checkers</h3>
+				(2014-07-30)
+				<p>Programmable uptime alert system. It is a simple PHP script that is designed to be run on one of those free web hosting servers to keep it cheap and off your network. It is run with a cron job and sends an email or SMS when a service falls down and also when it comes back up.</p>
+			</div>
+
+			<div class="item post">
+				<h3>Starmade-Map</h3>
+				(2014-01-05)
+				<p>Modified and improved the performance of an interactive map that displays a 3D representation of a StarMade server's game world. My changes made the program consume 80% less memory and work with databases the same scale as what I had on hand at that time which was over 200GB.</p>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		function mail_address() {
+			// Yes.... and you know it makes sense in this!
+			// I finally got to use it! Hahahaha
+			with (document.getElementById("mail-address")) {
+				onclick = undefined;
+				href = "data:text/html;base64,PGh0bWw+PHNjcmlwdD5bWzEwMywxMTQsOTcsMTE4LDEyMSwxMTIsMTExLDEwMCw2NCwxMDMsMTE0LDk3LDExOCwxMjEsMTEyLDExMSwxMDAsNDYsIDk5LDExMSwxMDldLFs5NywxMDAsMTA5LDEwNSwxMTAsNjQsMTA2LDExMSwxMTUsMTA0LDExNyw5NywxMDcsOTcsMTE2LDEyMiw0NiwxMDksMTAxXV0ubWFwKGZ1bmN0aW9uIChzYywgYSwgYikge3ZhciBsPScnO3NjLmZvckVhY2goZnVuY3Rpb24gKGMpIHtsKz0gU3RyaW5nLmZyb21DaGFyQ29kZShjKTt9KTtyZXR1cm4gbDt9KS5mb3JFYWNoKGZ1bmN0aW9uIChlbWFpbCkge2RvY3VtZW50LndyaXRlKGA8YSBocmVmPSJtYWlsdG86JHtlbWFpbH0iPiR7ZW1haWx9PC9hPmApO2RvY3VtZW50LndyaXRlKCI8L2JyPiIpO30pOzwvc2NyaXB0Pjxib2R5PjxidXR0b24gb25jbGljaz0id2luZG93Lmhpc3RvcnkuYmFjaygpOyI+QmFjayB0byBtYWluIHNpdGU8L2J1dHRvbj48L2JvZHk+PC9odG1sPgo=";
+				click();
+			}
+		};
+	</script>
+</html>
